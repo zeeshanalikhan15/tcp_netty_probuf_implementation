@@ -1,0 +1,9 @@
+
+client-netty/.vs/*
+client-netty/client-netty/bin/*
+client-netty/client-netty/obj/*
+client-netty/client-netty/.vs/*
+protobuff-test/.vs/*
+protobuff-test/protobuff-test/bin/*
+protobuff-test/protobuff-test/obj/*
+protobuff-test/protobuff-test/.vs/*

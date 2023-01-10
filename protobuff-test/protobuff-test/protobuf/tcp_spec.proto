@@ -1,0 +1,39 @@
+﻿syntax = "proto3";
+
+message MQMessage {
+
+	AgentEvent agent_event = 100;
+	CallEvent call_event = 101;
+
+}
+
+enum EventType {
+	// agent events
+	AGENT_LOGIN = 0;
+	AGENT_LOGOUT = 1;
+	AGENT_BUSY = 2;
+	AGENT_FREE = 3;
+
+	// call events
+	CALL_CONNECTED = 4;
+	CALL_DISCONNECTED = 5;
+}
+
+message AgentEvent {
+	EventType event_type = 1;
+	string agent_id = 2;
+	string skill_id = 3;
+	int64 event_time = 4;
+}
+
+message CallEvent {
+	EventType event_type = 1;
+	int64 abandon_time = 2;
+	string call_id = 3;
+	int64 connected_time = 4;
+	int64 disconnected_time = 5;
+	string caller_number = 6;
+	string vdn = 7;
+	string skill_id = 8;
+	string agent_id = 9;
+}
